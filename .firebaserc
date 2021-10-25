@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "unlucky-validators-dev",
+    "prod": "unlucky-validators",
+    "staging": "unlucky-validators-dev"
+  }
+}
