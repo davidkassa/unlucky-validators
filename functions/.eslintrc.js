@@ -8,6 +8,16 @@ module.exports = {
     "eslint:recommended",
     "google",
   ],
+  overrides: [
+    {
+      files: [
+        "*.js",
+      ],
+      rules: {
+        "no-unused-vars": "off",
+      },
+    },
+  ],
   rules: {
     quotes: ["error", "double"],
   },
