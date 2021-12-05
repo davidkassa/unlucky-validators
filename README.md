@@ -1,70 +1,116 @@
-# unlucky-validators
+<p align="center">
+  <a href="https://unluckyvalidators.io">
+    <img src="src/logo.svg" alt="Logo" width="80" height="80">
+  </a>
+
+  <h1 align="center">Unlucky Validators</h3>
+
+  <p align="center">
+    A simple application for sharing stats for Ethereum validators.
+    <br />
+    <br />
+    Can be found hosted at <a href="https://unluckvalidators.io"><strong>https://unluckyvalidators.io</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/davidkassa/unlucky-validators/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/davidkassa/unlucky-validators/issues">Request Feature</a>
+  </p>
+</p>
+
+---
+
+# Development
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]](LICENSE)
+
+| Service       | [Main](https://unluckyvalidators.io)             | [Develop](https://dev.unluckyvalidators.io)                   |
+| ------------- | -------------------------------------------- | ----------------------------------------------------- |
+| CI Status     | [![Main][build-main-shield]][build-main-url] | [![Develop][build-develop-shield]][build-develop-url] |
+| Build History | [![Main][build-main-history]]                | [![Develop][build-develop-history]]                   |
+
+## Getting started
+
+This should be all you need to do to get started. This will point to an existing Firebase database that is read-only.
+
+```javascript
+git clone git@github.com:davidkassa/unlucky-validators.git && cd unlucky-validators
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
+### React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### Firebase
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To get Firebase Functions or your own Firestore Database running you can follow their [Get Started](https://firebase.google.com/docs/functions/get-started) documentation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Run `npm install -g firebase-tools`
+- Create a [Firebase project](https://console.firebase.google.com)
+- [Create an Admin key](https://firebase.google.com/docs/functions/local-emulator#set_up_admin_credentials_optional) and name it service-key-dev.json.local
+- Update [.firebaserc](.firebaserc)
+- Call `npm run test:firebase` or `cd functions && npm run shell`
+- If all works, you can deploy from the [/functions](/functions) directory with `npm run deploy`
 
-### `npm test`
+You may need to authenticate with the Firebase CLI as well. I was already authenticated.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ROADMAP -->
 
-### `npm run build`
+## Roadmap
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+See the [open issues](https://github.com/davidkassa/unlucky-validators/issues) for a list of proposed features (and known issues).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- CONTRIBUTING -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request on the `develop` branch
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- LICENSE -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
-## Learn More
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[contributors-shield]: https://img.shields.io/github/contributors/davidkassa/unlucky-validators?style=flat-square
+[contributors-url]: https://github.com/davidkassa/unlucky-validators/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/davidkassa/unlucky-validators?style=flat-square
+[forks-url]: https://github.com/davidkassa/unlucky-validators/network/members
+[stars-shield]: https://img.shields.io/github/stars/davidkassa/unlucky-validators?style=flat-square
+[stars-url]: https://github.com/davidkassa/unlucky-validators/stargazers
+[issues-shield]: https://img.shields.io/github/issues/davidkassa/unlucky-validators?style=flat-square
+[issues-url]: https://github.com/davidkassa/unlucky-validators/issues
+[license-shield]: https://img.shields.io/github/license/davidkassa/unlucky-validators?style=flat-square
+[build-main-shield]: https://img.shields.io/github/workflow/status/davidkassa/unlucky-validators/Deploy%20Production?style=flat-square
+[build-main-url]: https://github.com/davidkassa/unlucky-validators/actions?query=branch%3Amain
+[build-main-history]: https://buildstats.info/github/chart/davidkassa/unlucky-validators?includeBuildsFromPullRequest=false&branch=main
+[build-develop-shield]: https://img.shields.io/github/workflow/status/davidkassa/unlucky-validators/Deploy%20Staging?style=flat-square
+[build-develop-url]: https://github.com/davidkassa/unlucky-validators/actions?query=branch%3Adevelop
+[build-develop-history]: https://buildstats.info/github/chart/davidkassa/unlucky-validators?includeBuildsFromPullRequest=false&branch=develop
